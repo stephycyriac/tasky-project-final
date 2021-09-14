@@ -16,7 +16,7 @@
   <!--style css-->
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="loadInitialCardData()">
     <!--modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -95,21 +95,7 @@
 
    <div class="row task_container">
        <div class="col-md-6 col-lg-4">
-        <div class="card text-center">
-            <div class="card-header d-flex justify-content-end gap-2">
-                <button type="button" class="btn btn-outline-success"><i class="fas fa-pen"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
-            </div>
-            <img src="https://i.pcmag.com/imagery/reviews/03aizylUVApdyLAIku1AvRV-39.1605559903.fit_scale.size_760x427.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-            <div class="card-footer">
-                <button type="button" class="btn btn-outline-primary float-end">Open Task</button>
-            </div>
-          </div>
+         
        </div>
    </div>
 </section>
