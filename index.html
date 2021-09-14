@@ -17,6 +17,49 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                    <div class="mb-3">
+                      <label for="imageurl" class="form-label" >Image Url</label>
+                      <input type="url" class="form-control" id="imageurl" aria-describedby="Image url" placeholder="https://example/image.jpg">  
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tasktitle" class="form-label">Task Title</label>
+                        <input type="text" class="form-control" id="tasktitle" aria-describedby="Task Title" placeholder="eg: Task Manipulation"> 
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="tasktype" class="form-label">Task Type</label>
+                        <input type="text" class="form-control" id="tasktype" aria-describedby="Task Type" placeholder=" eg: Work">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="taskdescription" class="form-label">Task Description</label>
+                            <textarea rows="6" class="form-control" id="taskdescription" aria-describedby="Task Description" placeholder="Describe your task in detail" >
+                        </textarea> 
+                          </div>
+
+                    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="saveChanges()"
+              data-bs-dismiss="modal">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -30,7 +73,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>   
               </li>
             </ul>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="fas fa-plus"></i> Add New</button>
           </div>
         </div>
@@ -50,7 +93,7 @@
 <section>
     
 
-   <div class="row">
+   <div class="row task_container">
        <div class="col-md-6 col-lg-4">
         <div class="card text-center">
             <div class="card-header d-flex justify-content-end gap-2">
@@ -72,6 +115,11 @@
 </section>
       </div>
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<!--our javascrit -->
+<script src="index.js">
+
+</script>
+
 </body>
 </html>
